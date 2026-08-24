@@ -1,0 +1,292 @@
+/* root variables */
+:root {
+  --main-background: #5f5355;
+  --dark-green-theme: #2a4a53;
+  --main-text: #555555;
+  --white: #ffffff;
+
+  --container-width: 1000px;
+  --container-aspect-ratio: 604 / 574;
+}
+
+/* body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0 2rem 0;
+  gap: 0;
+}
+
+/* logo */
+.logo {
+  position: relative;
+  width: 450px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+/* containers */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 37.75rem;
+  gap: 0.5rem;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.photobooth-container {
+  position: relative;
+  width: var(--container-width);
+  aspect-ratio: var(--container-aspect-ratio);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 2vh;
+}
+
+@media screen and (max-width: 768px) {
+  .photobooth-container {
+    width: 90vw;
+  }
+}
+
+/* menu page */
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+  width: 37.75rem;
+  height: 100vh;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  padding: 0;
+}
+
+.menu-header {
+  width: 20rem;
+  aspect-ratio: 517 / 100;
+  background-image: url('../Assets/fish-photobooth/menupage/Header.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 1rem auto;
+}
+
+/* mock elements */
+.photobooth-mock{
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* photobooth frame */
+.photobooth-mock {
+  z-index: 1;
+  width: calc((460 / 604) * 100%);
+  height: calc(534.4 / 574 * 100%);
+  left: calc(75 / 604 * 100%);
+  top: calc(20 / 574 * 100%);
+  background-image: url('../Assets/fish-photobooth/homepage/animated-photobooth-mock/1.png');
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+}
+
+/* button styling */
+.button-container {
+  margin-top: 0;
+}
+
+button {
+  color: var(--main-text);
+  font-family: arial;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid #1e1e1e;
+  border-radius: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #744040;
+  color: var(--white);
+  border: 1px solid #ffffff;
+}
+
+#select-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.56rem;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+}
+
+#next-loc-button, #prev-loc-button {
+  width: 10rem;
+  height: 3rem;
+  color: var(--main-text);
+  margin-top: 1vh;
+  font-family: arial;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid #1e1e1e;
+  border-radius: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+#next-loc-button:hover{
+  transform: scale(1.05);
+  background-color: rgb(105, 111, 137);
+  color: var(--white);
+  border: 1px solid #ffffff;
+}
+
+#prev-loc-button:hover {
+  transform: scale(1.05);
+  background-color: lightblue;
+  color: var(--white);
+  border: 1px solid #ffffff;
+}
+
+#menu-camera-button,
+#menu-upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.56rem;
+  width: 20rem;
+  height: 5rem;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  #select-button {
+    width: 8rem;
+    height: 3.2rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==============================
+   Tablet
+============================== */
+
+@media screen and (max-width: 768px) {
+
+  body {
+    padding:
+      1rem
+      0.75rem
+      2rem;
+  }
+
+  .logo {
+    width: min(350px, 90vw);
+  }
+
+  .photobooth-container {
+    width: 100%;
+  }
+
+  .menu-container {
+    margin-top: 2rem;
+  }
+
+  #select-button {
+    width: 8rem;
+    height: 3.2rem;
+
+    font-size: 1.2rem;
+
+    padding: 0.4rem 0.5rem;
+    gap: 0.4rem;
+  }
+
+  #menu-camera-button,
+  #menu-upload-button {
+    width: min(18rem, 90vw);
+    height: 4.5rem;
+  }
+}
+
+
+/* ==============================
+   Mobile
+============================== */
+
+@media screen and (max-width: 480px) {
+
+  body {
+    padding-top: 0.75rem;
+  }
+
+  .logo {
+    width: 90vw;
+  }
+
+  .home-container {
+    width: 100%;
+  }
+
+  .photobooth-container {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .menu-container {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .menu-header {
+    width: 90vw;
+  }
+
+  button {
+    font-size: 1.2rem;
+  }
+
+  #select-button {
+    width: 7.5rem;
+    height: 2.8rem;
+  }
+
+  #menu-camera-button,
+  #menu-upload-button {
+    width: 90vw;
+    max-width: 20rem;
+
+    height: 4rem;
+  }
+}

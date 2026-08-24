@@ -1,0 +1,129 @@
+:root {
+  --main-background: #000000;
+  --dark-green-theme: #2a4a53;
+  --main-text: #555555;
+  --white: #ffffff;
+}
+/* logo */
+.logo {
+  position: relative;
+  width: 600px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+/* body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding: 1rem 0 2rem 0;
+  gap: 0;
+}
+
+
+/* button styling */
+.button-container {
+  margin-top: 0;
+}
+
+button {
+  color: var(--main-text);
+  font-family: arial;
+  font-size: 1.5rem;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid #1e1e1e;
+  border-radius: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #744040;
+  color: var(--white);
+  border: 1px solid #ffffff;
+}
+
+#next-loc-button {
+  width: 10rem;
+  height: 3rem;
+  color: var(--main-text);
+  margin-top: 1vh;
+  font-family: arial;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--white);
+  border: 1px solid #1e1e1e;
+  border-radius: 2rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+#next-loc-button:hover {
+  transform: scale(1.05);
+  background-color: rgb(107, 91, 68);
+  color: var(--white);
+  border: 1px solid #ffffff;
+}
+
+.main-layout {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.theatre-frame {
+  position: relative;
+
+  width: 1219px;
+  height: 698px;
+
+  flex-shrink: 0;
+}
+
+/* The video itself */
+.theatre-video {
+  position: absolute;
+
+  left: 218px;
+  top: 95px;
+
+  width: 781px;
+  height: 492px;
+
+  object-fit: contain;
+
+  background-color: black;
+
+  z-index: 1;
+}
+
+/* Theatre frame goes ON TOP */
+.frame-overlay {
+  opacity: 1;
+  inset: 0;
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 1219px;
+  height: 698px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}

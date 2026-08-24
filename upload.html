@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Upload Photos</title>
+
+<link rel="icon" href="Assets/fish-photobooth/favicon.png">
+<link rel="stylesheet" href="StyleSheets/upload.css">
+</head>
+
+<body>
+
+<div class="logo">
+    <img src="Assets/fish-photobooth/menupage/Header.png" alt="Logo">
+</div>
+
+<div class="main-layout">
+
+    <button id="prevFrame" class="frame-nav">&#10094;</button>
+
+    <div class="photobooth-container">
+
+        <canvas
+            id="finalCanvas"
+            width="600"
+            height="1800">
+        </canvas>
+
+        <img
+            id="frameOverlay"
+            class="frame-overlay"
+            src="Assets/fish-photobooth/camerapage/frame1.png"
+            alt="Frame">
+
+    </div>
+
+    <button id="nextFrame" class="frame-nav">&#10095;</button>
+
+</div>
+
+<input
+    type="file"
+    id="uploadPhotoInput"
+    accept="image/*"
+    hidden>
+
+<div class="controls">
+
+    <button id="uploadPhoto">
+        Upload Photo
+    </button>
+
+    <button id="retakePhoto">
+        Start Over
+    </button>
+
+</div>
+
+<script src="Javascripts/upload.js"></script>
+
+</body>
+</html>
